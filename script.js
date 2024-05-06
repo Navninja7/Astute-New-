@@ -51,6 +51,7 @@ let services = document.getElementById('services');
 let dropdownServices = document.getElementById('dropdown-services');
 let floatingMenu = document.getElementById('floating-menu');
 let floatingItems = document.querySelectorAll('.floating-menu-list-item');
+let noDisplay=true;
 
 floatingItems.forEach((item,index)=>{
     item.addEventListener('click',()=>{
@@ -62,7 +63,19 @@ floatingItems.forEach((item,index)=>{
         });
     });
 });
+window.addEventListener('resize',()=>{
+    if(window.innerWidth < 1280){
+        document.getElementById('floating-menu').style.display="none";
+        noDisplay=true;
+    } else {
+        document.getElementById("floating-menu").style.display="flex";
+        noDisplay=false;
+    }
+})
 window.addEventListener('scroll',()=>{
+    if(!noDisplay){
+
+    
     if(document.getElementsByClassName('heading')[0].getBoundingClientRect().top > window.innerHeight/2){
         document.getElementById('floating-menu').style.display="none";
         document.getElementById('floating-menu').style.transform = "translateX(5px)";
@@ -85,6 +98,7 @@ window.addEventListener('scroll',()=>{
         }
         
     });
+}
     
 });
 
