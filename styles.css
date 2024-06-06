@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    font-size:0.7rem;
+    font-size:0.6rem;
     font-family: "Ubuntu Sans";
     background-color: #fff;
     width:100vw;
@@ -134,14 +134,14 @@ body{
 }
 
 .navbar #dropdown-services{
-    font-size: 1.5em;
+    font-size: 2em;
     z-index: 0;
     display:none;
     justify-content: center;
     align-items: center;
     width:100vw;
     height:auto;
-    background-color: rgba(255,69,0,0.7);
+    background-color: rgba(255,69,0,0.8);
     color:white;
     position:absolute;
     top:65px;
@@ -199,19 +199,65 @@ body{
     justify-content: flex-start;
 }
 .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 50px;
     color:#222;
     background-color: rgba(255,165,0,0.1);
     backdrop-filter: blur(8px);
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
     line-height: 40px;
     padding:30px;
     font-family: "Ubuntu Sans";
     font-size: 2em;
     width:70vw;
+    overflow:hidden;
 }
 
+.question{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.plus{
+    height:40px;
+    width:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: orange;
+    color:white;
+    padding:10px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.plus:hover{
+    cursor:pointer;
+    background-color: rgb(214, 147, 24);
+    transition:all 0.2s;
+}
+
+.answer{
+    margin:25px 0 -10px;
+    width:100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    height:0;
+    background-color: rgba(255,165,0,0.1);
+    border-left: 5px solid orangered;
+    transition:all 0.3s;
+}
+
+.expand{
+    display:inline-block;
+    font-size: 3em;
+}
 
 
 #dropdown-services div{

@@ -60,28 +60,39 @@
 
     
 
-    <div class="heading">
+    <div class="heading" style="margin-bottom: 50px;">
         FAQs
     </div>
+    <div id="faq-section">
+
+    </div>
+    
+
+    <!-- <div class="text">
+        <div class="question">
+            <div class="plus">+</div>
+            <div><span style="font-weight:800;">2.Do you guarantee on-time delivery? </span></div>
+        </div>
+        
+        <div class="answer">
+            We certainly do. We commit to completing the work by the deadline while allowing time for review and correction. We formed a team based on the work and time constraints. However, we will also require your cooperation and prompt response.
+        </div>
+    </div>
+
 
     <div class="text">
-        <span style="font-weight:800;">1.How will I communicate with your team?</span>
+        <div class="question">
+            <div class="plus">+</div>
+            <div><span style="font-weight:800;">3.Have you worked with variety of subjects? </span></div>
+        </div>
+        
+        <div class="answer">
+            Yes, we have worked on topics ranging from social sciences to law, medical sciences, and green buildings, among others. The list of topics on which we have worked is extensive. Our team can assist you with both qualitative and quantitative research. Furthermore, we provide expert assistance for master's and doctoral programmes.
+        </div>
     </div>
-    <div class="text" style="background-color: rgba(30, 144, 255,0.4);">
-        When you sign up for our services, you will be put in touch with a member of our writing and editorial team who will be assigned to you. You can communicate both by email and by phone. Your inquiry will be responded to within a few hours.
-    </div>
-    <div class="text">
-        <span style="font-weight:800;">2.Do you guarantee on-time delivery? </span>
-    </div>
-    <div class="text" style="background-color: rgba(30,144,255,0.4);">
-        We certainly do. We commit to completing the work by the deadline while allowing time for review and correction. We formed a team based on the work and time constraints. However, we will also require your cooperation and prompt response.
-    </div>
-    <div class="text">
-        <span style="font-weight:800;">3.Have you worked with variety of subjects?</span>
-    </div>
-    <div class="text" style="background-color: rgba(30,144,255,0.4);">
-        Yes, we have worked on topics ranging from social sciences to law, medical sciences, and green buildings, among others. The list of topics on which we have worked is extensive. Our team can assist you with both qualitative and quantitative research. Furthermore, we provide expert assistance for master's and doctoral programmes.
-    </div>
+
+    
+
     <div class="text">
         <span style="font-weight:800;">4.How do you check for Plagiarism?</span>
     </div>
@@ -159,7 +170,7 @@
     </div>
     <div class="text" style="background-color: rgba(30,144,255,0.4);">
         Yes, you can develop your MA thesis or any other similar project in your PhD thesis in the same way that you would any periodical article or book. However, ensure that your PhD dissertation is an authentic version with original data. You cannot combine data or words from two degrees. This implies that you must conduct new extensive research (data collection as well).
-    </div>
+    </div> -->
 
     <div id="footer">
         <div id="quick-links">
@@ -182,4 +193,103 @@
     
 </body>
 <script src="script.js"></script>
+<script>
+    let faq = [
+    {
+        question: "How will I communicate with your team?",
+        answer: "When you sign up for our services, you will be put in touch with a member of our writing and editorial team who will be assigned to you. You can communicate both by email and by phone. Your inquiry will be responded to within a few hours."
+    },
+    {
+        question: "Do you guarantee on-time delivery?",
+        answer: "Yes, we guarantee on-time delivery. We commit to completing the work by the deadline while allowing time for review and correction. Our team is formed based on the work and time constraints. However, we also require your cooperation and prompt response."
+    },
+    {
+        question: "Have you worked with a variety of subjects?",
+        answer: "Yes, we have worked on topics ranging from social sciences to law, medical sciences, and green buildings, among others. Our team can assist you with both qualitative and quantitative research, and we provide expert assistance for master's and doctoral programs."
+    },
+    {
+        question: "How do you check for plagiarism?",
+        answer: "We thoroughly check documents for plagiarism using both tools and manual editing. To ensure originality, we double-check citations and references. Each writer also double-checks their work for accidental plagiarism."
+    },
+    {
+        question: "Is there a deadline for registering on your website?",
+        answer: "No, you can sign up and begin whenever you want."
+    },
+    {
+        question: "What are the acceptable or compatible file formats?",
+        answer: "The acceptable file formats are PDF, RTF, and Word, though PDF is typically preferred. If the file is submitted in a format not listed, it must be converted to PDF format."
+    },
+    {
+        question: "Can you advise on the type of questionnaire for my research (open-ended or closed-ended)?",
+        answer: "Yes, we can advise on this. We will need to review your research documents to determine whether your research requires open-ended, closed-ended, or a combination of both types of questions."
+    },
+    {
+        question: "Who should I contact to inquire about the final work status?",
+        answer: "You can inquire about the status of the work by contacting us via phone, email, or online chat."
+    },
+    {
+        question: "How can I ensure there are no copyright issues with my thesis?",
+        answer: "We guarantee that your work will not be reused for commercial or third-party gain. We ensure each client's data security and confidentiality."
+    },
+    {
+        question: "Does my command of the English language matter in research writing?",
+        answer: "Yes, it is significant. A thesis must be comprehensively written, academically compliant, and of high English writing standards. If English is your second language, we recommend hiring professional writers to assist you."
+    },
+    {
+        question: "Is there a particular writing style that you adhere to?",
+        answer: "We adhere to the writing style consistent with your university's standards, whether it is APA, MLA, Turabian, Harvard, Chicago, or any other specified format."
+    },
+    {
+        question: "What is the criterion for determining the uniqueness of my thesis review?",
+        answer: "Our team of qualified analysis experts ensures the uniqueness of your thesis review. We provide original, non-copied writing that is free of plagiarism."
+    },
+    {
+        question: "What are your credentials?",
+        answer: "We deliver original work after referencing 20-30 research papers, meeting your university's standards. If you are not satisfied, we accept necessary revisions for up to 30 days after delivery."
+    },
+    {
+        question: "Will I get structured credentials?",
+        answer: "Yes, when requesting a citation for a literature review, you must provide specific details and your university's citation style. Our experts will help organize your credentials logically."
+    },
+    {
+        question: "What should I do if I find no issues with your thesis?",
+        answer: "If you have no issues, inform us of any comments or suggestions from you or your supervisor. We provide free revisions for 30 days."
+    },
+    {
+        question: "Can I incorporate my MA dissertation or a similar project into my PhD thesis?",
+        answer: "Yes, you can develop your MA thesis or similar project into your PhD thesis, ensuring it is an authentic version with original data. You must conduct new extensive research and cannot combine data or words from two degrees."
+    }
+];
+
+for(let i=faq.length-1;i>=0;i--){   
+    document.getElementById('faq-section').insertAdjacentHTML('beforebegin',`
+    <div class="text">
+        <div class="question">
+            <div class="plus">+</div>
+            <div><span style="font-weight:800;">${faq.length-i}. ${faq[i].question}</span></div>
+        </div>
+        
+        <div class="answer">
+            ${faq[i].answer}
+        </div>
+    </div>`);
+}
+
+document.querySelectorAll('.question').forEach((question,index)=>{
+    question.addEventListener('click',()=>{
+        let answer = document.getElementsByClassName('answer')[index];
+        let plus = document.getElementsByClassName('plus')[index];
+        if(answer.style.display === ""){
+            answer.style.display="flex";
+            answer.style.height="auto";
+            plus.innerHTML = '-';
+        } else {
+            answer.style.display="";
+            answer.style.height="";
+            plus.innerHTML = '+';
+        }
+    })
+})
+
+</script>
 </html>
