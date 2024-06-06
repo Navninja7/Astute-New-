@@ -57,6 +57,12 @@ document.body.addEventListener('click',(e)=>{
     }, 200);
     
 })
+
+window.addEventListener('resize',()=>{
+    if(window.innerWidth >= 576){
+        document.getElementsByClassName('side-menu')[0].style.display = "none";
+    }
+});
 let navbar = document.getElementsByClassName("navbar");
 let services = document.getElementById('services');
 let dropdownServices = document.getElementById('dropdown-services');
