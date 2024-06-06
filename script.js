@@ -23,6 +23,17 @@ document.body.addEventListener('load',()=>{
     document.body.style.opacity=0;
     
 });
+let footer = document.getElementById('footer');
+if(document.body.scrollHeight > window.innerHeight){
+    console.log('large document');
+    footer.style.position = "relative";
+} else {
+    console.log('small document');
+    footer.style.position = "absolute";
+}
+document.getElementById('logo').addEventListener('click',()=>{
+    window.location.href = "index.html";
+});
 document.body.addEventListener('click',(e)=>{
     console.log(e.clientX, e.clientY);
     ring.style.left = ""+((e.clientX)-diameter/2)+"px";
