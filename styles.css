@@ -77,7 +77,7 @@ body{
     background-color: yellow;
 }
 #floating-menu li::before:nth-of-type(3){
-    background-color: orangered;
+    background-color: rgb(248, 99, 45);;
 }
 #floating-menu li::before:nth-of-type(4){
     background-color: greenyellow;   
@@ -150,7 +150,7 @@ body{
 
 #welcome-message{
     width:70vw;
-    background:linear-gradient(to top right, orangered 20%,khaki);
+    background:linear-gradient(to top right, rgb(248, 99, 45) 20%,khaki);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Ubuntu Sans";
@@ -265,7 +265,7 @@ body{
     position:absolute;
     width:55%;
     height:7px;
-    background-color: orangered;
+    background-color: rgb(248, 99, 45);
     bottom:-20px;
     left:0px;
 }
@@ -291,7 +291,7 @@ a{
     flex-direction: column;
     align-items: center;
     width:100%;
-    background-color: orangered;
+    background-color: rgb(248, 99, 45);;
 }
 #quick-links-container{
     width:100%;
