@@ -21,6 +21,7 @@ body{
     overflow-y: auto;
     opacity:1;
     transition:all 0.4s;
+    margin-top: 120px;
 }
 
 
@@ -541,9 +542,6 @@ font-size: 2em;
     .navbar{
         display:none;
     }
-    .toggle-menu-offset{
-        display: flex;
-    }
     #welcome-div{
         display:flex;
         flex-direction: column;
@@ -568,14 +566,14 @@ font-size: 2em;
     .heading{
         font-size: 2em;
     }
+    .toggle-menu{
+        display:flex;
+    }
 }
 
 @media screen and (max-width:765px){
     .navbar{
         display:none;
-    }
-    .toggle-menu-offset{
-        display: flex;
     }
     
     #welcome-message{
@@ -590,9 +588,6 @@ font-size: 2em;
     .text{
         font-size: 1.5em;
         line-height: 25px;
-    }
-    #footer{
-        font-size: 1.2em;
     }
     .toggle-menu{
         display:flex;
