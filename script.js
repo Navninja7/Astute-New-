@@ -261,4 +261,37 @@ setInterval(() => {
     },200);
     
 }, 1500);
+let isToggle = false;
+document.getElementById('services-side-menu-item').addEventListener("click",()=>{
+    if(isToggle){
+        document.getElementById('services-side-menu').style.display = "none";
+        document.getElementById('side-caret-down').style.transform = "rotate(0deg)";
+    } else {
+        document.getElementById('services-side-menu').style.display = "block";
+        document.getElementById('side-caret-down').style.transform = "rotate(180deg)";
+    }
+    isToggle = !isToggle;
+});
+let isMenu = false;
+document.getElementById('services').addEventListener('mouseenter',()=>{
+    document.getElementById('caret-down').style.transform = "rotate(180deg)";
+    document.getElementById('caret-down').style.transformOrigin = "10px";
+});
+document.getElementById('services').addEventListener('mouseleave',()=>{
+document.getElementById('dropdown-services').addEventListener('mouseleave',()=>{
+
+        document.getElementById('caret-down').style.transform = "rotate(0deg)";
+        document.getElementById('caret-down').style.transformOrigin = "10px";
+    });
+});    
+    
+
+$(document).ready(function(){
+    $("#services-side-menu-item").on("click",function(event){
+        event.stopPropagation();
+    })
+    $(".toggle-menu").click(function(){
+        $(".side-menu").slideToggle("slow");
+    });
+});
 

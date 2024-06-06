@@ -2,20 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- <div id="horizontal"></div>
     <div id="vertical"></div> -->
+    <div class="toggle-menu"><i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="side-menu">
+        <ul>
+            <li>Home</li>
+            <li id="services-side-menu-item">Services <i id="side-caret-down" class="fa fa-caret-down" style="padding-left:2px;font-size: 1em;" aria-hidden="true"></i>    </li>
+            <ul id="services-side-menu">
+                <a href='phdGuidance.html'><p>PhD Topic Guidance</p></a>
+                    <a href='instantResearchAssistance.html'><p>Instant Research Assistance</p></a>
+                    <a href='researchProposalDevelopment.html'><p>Research Proposal Development</p></a>
+                    <a href='phdThesisWriting.html'><p>PhD Thesis Writing</p></a>
+                    <a href='statisticsHelpUsingSpss.html'><p>Statistics Help Using SPSS</p></a>
+                    <a href='phdThesisRevision.html'><p>PhD Thesis Revision</p></a>
+                    <a href='researchPaperWriting&PublicationSupport.html'><p>Research Paper Writing & Publication Support</p></a>
+                    <a href='mastersDissertationWriting.html'><p>Master's Dissertation Writing</p></a>
+                    <a href='thesisEditing.html'><p>Thesis Editing</p></a>
+            </ul>
+            <li>FAQs</li>
+        </ul>
+    </div>
+    
     <div class="navbar">
         <div id="logo">
 
         </div>
             <a href="index.html"><div class="nav-link">Home</div></a>
-            <div class="nav-link" id="services">Services</div>  
+            <div class="nav-link" id="services">Services <i id='caret-down' class="fa fa-caret-down" aria-hidden="true"></i></div>  
             <a href="FAQ.html"><div class="nav-link">FAQs</div></a>  
 
         <div id="dropdown-services">
@@ -25,9 +47,9 @@
                     <a href='researchProposalDevelopment.html'><p>Research Proposal Development</p></a>
                 </div>
                 <div>
-                    <a href='phdThesisWriting.html'><p>PhD Thesis Writing</p></a>
-                    <a href='statisticsHelpUsingSpss.html'><p>Statistics Help Using SPSS</p></a>
-                    <a href='phdThesisRevision.html'><p>PhD Thesis Revision</p></a>
+                    <a href='phdGuidance.html'><p>PhD Topic Guidance</p></a>
+                    <a href='instantResearchAssistance.html'><p>Instant Research Assistance</p></a>
+                    <a href='researchProposalDevelopment.html'><p>Research Proposal Development</p></a>
                 </div>
                 <div>
                     <a href='researchPaperWriting&PublicationSupport.html'><p>Research Paper Writing & Publication Support</p></a>
