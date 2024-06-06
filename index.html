@@ -11,12 +11,15 @@
 <body>
     <!-- <div id="horizontal"></div>
     <div id="vertical"></div> -->
-    <div class="toggle-menu"><i class="fa-solid fa-bars"></i>
+    <div class="toggle-menu-offset">
+    </div>
+
+        <div class="toggle-menu"><i class="fa-solid fa-bars"></i>
     </div>
     <div class="side-menu">
         <ul>
-            <li>Home</li>
-            <li id="services-side-menu-item">Services <i id="side-caret-down" class="fa fa-caret-down" style="padding-left:2px;font-size: 1em;" aria-hidden="true"></i>    </li>
+            <a href="index.html">Home</a>
+            <li id="services-side-menu-item">Services<i id='side-caret-down' class="fa fa-caret-down" aria-hidden="true"></i></li>
             <ul id="services-side-menu">
                 <a href='phdGuidance.html'><p>PhD Topic Guidance</p></a>
                     <a href='instantResearchAssistance.html'><p>Instant Research Assistance</p></a>
@@ -28,7 +31,7 @@
                     <a href='mastersDissertationWriting.html'><p>Master's Dissertation Writing</p></a>
                     <a href='thesisEditing.html'><p>Thesis Editing</p></a>
             </ul>
-            <li>FAQs</li>
+            <a href="FAQ.html">FAQs</a>
         </ul>
     </div>
     
@@ -123,35 +126,78 @@
     <div id="quick-links">
         <p style="font-weight: 800;">Quick Links</p>
         <div id="quick-links-container">
-            <div>
-                <a href="phdGuidance.html"><p>PhD Guidance</p></a>
-                <a href="instantResearchAssistance.html"><p>Instant Research Assistance</p></a>
-                <a href="researchProposalDevelopment.html"><p>Research Proposal Development</p></a>
-            </div>
         <div>
-            <a href="phdThesisWriting.html"><p>PhD Thesis Writing</p></a>
-            <a href="statisticsHelpUsingSpss.html"><p>Statistics Help Using SPSS</p></a>
-            <a href="phdThesisRevision.html"><p>PhD Thesis Revision</p></a>
+            <i class='fab fa-whatsapp-square'></i><a href="https://wa.me/919502647870?text=Hello%20there!"><p>Whatsapp</p></a>
         </div>
         <div>
-            <a href="researchPaperWriting&PublicationSupport.html"><p>Research Paper Writing</p></a>
-            <a href="mastersDissertationWriting.html"><p>Master's Dissertation Writing</p></a>
-            <a href="thesisEditing.html"><p>Thesis Writing</p></a>
+            <i class="fa fa-phone"></i></i><p>+91 9502647870</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:astuteresearchservices@gmail.com"></a><p style="margin-top: -20px;">Email Us</p></a>
         </div>
         </div>
             
     </div>
-    <div id="contact-us">
-        <p id="contact-us-text">Contact Us</p>
-        <div>
-            <i class='fab fa-whatsapp-square'></i><p>Whatsapp</p>
-        </div>
-        <div>
-            <i class="fa fa-phone"></i></i><p>Call Us</p>
-        </div>
-
-    </div>
 </div>
-<script src="script.js">
+<script src="script.js"></script>
+<script>
+    let floatingMenu = document.getElementById('floating-menu');
+let floatingItems = document.querySelectorAll('.floating-menu-list-item');
+let noDisplay=true;
+
+window.addEventListener('resize',()=>{
+    if(window.innerWidth < 1280){
+        document.getElementById('floating-menu').style.display="none";
+        noDisplay=true;
+    } else {
+        document.getElementById("floating-menu").style.display="flex";
+        noDisplay=false;
+    }
+})
+window.addEventListener('scroll',()=>{
+    if(!noDisplay){
+
+    
+    if(document.getElementsByClassName('heading')[0].getBoundingClientRect().top > window.innerHeight/2){
+        document.getElementById('floating-menu').style.display="none";
+        document.getElementById('floating-menu').style.transform = "translateX(5px)";
+    } else {
+        document.getElementById('floating-menu').style.display="flex";
+        document.getElementById('floating-menu').style.transform = "translateX(-5px)";
+    }
+    
+    if(document.getElementById('footer').getBoundingClientRect().bottom < window.innerHeight + 100){
+        document.getElementById('floating-menu').style.display="none";
+    }
+    document.querySelectorAll('.heading').forEach((div,index)=>{
+        if((div.getBoundingClientRect().top - 30) <= window.innerHeight/2 && document.getElementsByClassName('heading-text')[index].getBoundingClientRect().bottom >= window.innerHeight/2){
+            document.getElementsByClassName('floating-menu-list-item')[index].style.backgroundColor="rgba(30,144,255,0.1)";
+            document.getElementsByClassName('floating-menu-list-item')[index].style.fontWeight="500";
+        } else {
+            document.getElementsByClassName('floating-menu-list-item')[index].style.backgroundColor="transparent";
+            document.getElementsByClassName('floating-menu-list-item')[index].style.fontWeight="normal";
+            
+        }
+        
+    });
+}
+    
+});
+
+for(let i=0;i<(floatingMenu.children[0].childElementCount);i++){
+    console.log();
+    
+}
+
+floatingItems.forEach((item,index)=>{
+    item.addEventListener('click',()=>{
+        console.log('click');
+        let offset = document.getElementsByClassName('heading')[index].getBoundingClientRect().top + window.scrollY - 60;
+        window.scrollTo({
+            top:offset,
+            behavior:'smooth'
+        });
+    });
+});
 </script>
 </html>

@@ -86,6 +86,7 @@ body{
     background-color: dodgerblue;
 }
 .navbar{
+    top:0;
     font-size: 0.8em;
     z-index: 3;
     font-family: "Ubuntu Sans";
@@ -126,7 +127,8 @@ body{
     cursor: pointer;
     transition: all 0.2s;
 }
-#caret-down{
+
+#caret-down,#side-caret-down{
     padding-left:5px;font-size: 1em;
 }
 
@@ -287,7 +289,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:70%;
+    width:100%;
     background-color: orangered;
 }
 #quick-links-container{
@@ -306,18 +308,18 @@ a{
 #quick-links-container div a{
     width:100%;
 }
-#contact-us{
+/* #contact-us{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:30%;
+    width:45%;
 }
 
 #contact-us div{
     display: flex;
     align-items: center;
     flex-direction: row;
-}
+} */
 
 #footer p{
     padding:20px;
@@ -353,6 +355,20 @@ a{
     background-color: #eee;
 
 }
+
+.toggle-menu:hover{
+    cursor: pointer;
+}
+
+.toggle-menu-offset{
+    top:0;
+    position:relative;
+    display: none;
+    width:100vw;
+    height:100px;
+    padding:20px;
+    background-color: transparent;
+}
 .side-menu{
     z-index: 12;
     display:none;
@@ -371,15 +387,51 @@ a{
 .side-menu ul{
     list-style: none;
 }
+.side-menu li{
+    padding:10px;
+}
 .side-menu li,a{
     margin:15px 0;
 }
 
+.side-menu a{
+    padding:10px;
+}
+
+.side-menu li:hover{
+    cursor:pointer;
+}
+
+.side-menu a:hover{
+    background-color: rgb(255, 125, 81,0.6);
+}
+
+body::-webkit-scrollbar{
+    width:12px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 20px;
+}
+#services-side-menu::-webkit-scrollbar{
+    width:8px;
+}
+#services-side-menu::-webkit-scrollbar-thumb{
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
 #services-side-menu{
+    padding:20px;
+    background-color: rgb(255, 125, 81,0.6);
     display:none;
     align-items: center;
     transition:all 0.3s;
+    max-height: 300px;
+    overflow: auto;
 }
+
 .toggle-menu .fa-solid{
 font-size: 2em;
 }
@@ -388,6 +440,9 @@ font-size: 2em;
 @media screen and (max-width:576px) {
     .navbar{
         display:none;
+    }
+    .toggle-menu-offset{
+        display: flex;
     }
     #welcome-div{
         display:flex;
@@ -415,6 +470,9 @@ font-size: 2em;
 @media screen and (max-width:765px){
     .navbar{
         display:none;
+    }
+    .toggle-menu-offset{
+        display: flex;
     }
     
     #welcome-message{

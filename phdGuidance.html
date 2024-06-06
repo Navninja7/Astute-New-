@@ -9,12 +9,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 <body>
+    <div class="toggle-menu-offset">
+    </div>
     <div class="toggle-menu"><i class="fa-solid fa-bars"></i>
     </div>
     <div class="side-menu">
         <ul>
-            <li>Home</li>
-            <li id="services-side-menu-item">Services <i id="side-caret-down" class="fa fa-caret-down" style="padding-left:2px;font-size: 1em;" aria-hidden="true"></i>    </li>
+            <a href="index.html">Home</a>
+            <li id="services-side-menu-item">Services<i id='side-caret-down' class="fa fa-caret-down" aria-hidden="true"></i></li>
             <ul id="services-side-menu">
                 <a href='phdGuidance.html'><p>PhD Topic Guidance</p></a>
                     <a href='instantResearchAssistance.html'><p>Instant Research Assistance</p></a>
@@ -26,7 +28,7 @@
                     <a href='mastersDissertationWriting.html'><p>Master's Dissertation Writing</p></a>
                     <a href='thesisEditing.html'><p>Thesis Editing</p></a>
             </ul>
-            <li>FAQs</li>
+            <a href="FAQ.html">FAQs</a>
         </ul>
     </div>
     <div class="navbar">
@@ -34,7 +36,7 @@
 
         </div>
         <a href="index.html"><div class="nav-link">Home</div></a>
-        <div class="nav-link" id="services">Services</div>  
+        <div class="nav-link" id="services">Services <i id='caret-down' class="fa fa-caret-down" aria-hidden="true"></i></div>  
         <a href="FAQ.html"><div class="nav-link">FAQs</div></a>  
 
         <div id="dropdown-services">
@@ -56,15 +58,7 @@
         </div>
     </div>
 
-    <div id="floating-menu">
-        <ul>
-            <li class="floating-menu-list-item">PhD Guidance</li>
-            <li class="floating-menu-list-item">Journal Submission</li>
-            <li class="floating-menu-list-item">Plagiarism-free Writing</li>
-            <li class="floating-menu-list-item">Our Aim</li>
-            <li class="floating-menu-list-item">Our Mission</li>
-        </ul>
-    </div>
+    
 
     <div class="heading">
         PhD Guidance Service
@@ -124,7 +118,7 @@
     </div>
     
 </body>
-<script>
+<!-- <script>
     // document.getElementById('horizontal').style.position ="fixed";
 // document.getElementById('horizontal').style.width = "100vw";
 // document.getElementById('horizontal').style.height = "1px";
@@ -333,5 +327,6 @@ setInterval(() => {
 }, 1500);
 
 
-</script>
+</script> -->
+<script src="script.js"></script>
 </html>
